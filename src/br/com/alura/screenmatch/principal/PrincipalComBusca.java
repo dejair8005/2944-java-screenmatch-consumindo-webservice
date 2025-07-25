@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.principal;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -46,6 +47,12 @@ public class PrincipalComBusca {
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println("Título já convertido");
             System.out.println(meuTitulo);
+
+
+            FileWriter escrita = new FileWriter("filmes.txt");
+            escrita.write(meuTitulo.toString());
+            escrita.close();
+
         } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro: ");
             System.out.println(e.getMessage());
@@ -56,6 +63,9 @@ public class PrincipalComBusca {
         }
 
         System.out.println("Progama finalizou corretamente");
+
+
+
 
     }
 

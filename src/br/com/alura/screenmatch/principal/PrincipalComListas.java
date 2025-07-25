@@ -12,6 +12,7 @@ import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
+
         Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.avalia(9);
         Filme outroFilme = new Filme("Avatar", 2023);
@@ -34,7 +35,43 @@ public class PrincipalComListas {
             }
         }
 
-        List<String> buscaPorArtista = new LinkedList<>();
+
+
+
+
+
+
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("--------------------------------------------");
+        System.out.println("Exercício percorrendo array list");
+        System.out.println("--------------------------------------------");
+        System.out.println(" ");
+        
+
+        Filme favorito = new Filme("Interestelar", 2014);
+        favorito.avalia(0);
+        
+ 
+        ArrayList <Titulo> listaFilmes = new ArrayList<>();
+        listaFilmes.add(favorito);  
+
+        System.out.println(" ");
+        System.out.println(" ");
+
+
+        
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("--------------------------------------------");
+        System.out.println("Ordenando a lista");
+        System.out.println("--------------------------------------------");
+        System.out.println(" ");
+
+
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Paulo");
         buscaPorArtista.add("Jacqueline");
@@ -43,11 +80,19 @@ public class PrincipalComListas {
         Collections.sort(buscaPorArtista);
         System.out.println("Depois da ordenação");
         System.out.println(buscaPorArtista);
-        System.out.println("Lista de titulos ordenados");
+
+
+
         Collections.sort(lista);
         System.out.println(lista);
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
-        System.out.println("Ordenando por ano");
+        System.out.println("Ordenando ano de lançamento");
         System.out.println(lista);
+
+
     }
+
+
+
+
 }
